@@ -13,8 +13,14 @@ public class DemoController {
     private Coach coach;
 
 //    define a constructor for dependency injection
+//    @Autowired
+//    public DemoController(@Qualifier("trackCoach") Coach coach) {
+//        this.coach = coach;
+//    }
+
+
     @Autowired
-    public DemoController(@Qualifier("trackCoach") Coach coach) {
+    public DemoController(Coach coach) {
         this.coach = coach;
     }
 
